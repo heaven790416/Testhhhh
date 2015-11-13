@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <include layout="@layout/toolbar" />
+    
+    <WebView
+        android:id="@+id/webView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/menuContainer"
+        android:layout_below="@+id/toolbar" />
+    
+    <RelativeLayout
+        android:id="@+id/menuContainer"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white_color"
+        android:clickable="true" >
+		
+        <RelativeLayout
+            android:id="@+id/line1"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentTop="true"
+            android:background="#c6c6c6" />
+        
+        <RelativeLayout
+            android:id="@+id/leftContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp" >
+
+            <Button
+                android:id="@+id/leftButton"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginRight="3dp"
+                android:background="@drawable/ic_prev_arrow"
+                android:clickable="false"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/leftTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/leftButton"
+                android:text="上一篇"
+                android:textColor="#657380" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rightContainer"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp" >
+
+            <Button
+                android:id="@+id/rightButton"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginRight="3dp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/ic_next_arrow"
+                android:clickable="false" />
+
+            <TextView
+                android:id="@+id/rightTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/rightButton"
+                android:text="下一篇"
+                android:textColor="#657380" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    
+
+</RelativeLayout>

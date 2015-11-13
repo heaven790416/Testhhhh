@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white_color" >
+
+    <RelativeLayout
+        android:id="@+id/stationContainer"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp" >
+
+        <TextView
+            android:id="@+id/stationTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="2dp"
+            android:textStyle="bold"
+            android:textColor="@color/detail_info_text_color"
+            android:text="101站" />
+
+        <TextView
+            android:id="@+id/walkTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:textStyle="bold"
+            android:textColor="@color/detail_info_text_color"
+            android:text="步行9分 約200公尺" />
+
+        <ImageView
+            android:id="@+id/walkImageView"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_toLeftOf="@+id/walkTextView"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_walk" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/lineContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/stationContainer"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp" >
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/dividerContainer"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/lineContainer"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:background="#dcdcdc" >
+    </RelativeLayout>
+    
+</RelativeLayout>

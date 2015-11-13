@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="105dp" >
+
+    <ImageView
+        android:id="@+id/thumbImageView"
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="20dp"
+        android:background="#999999" />
+
+    <TextView
+        android:id="@+id/nameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="22dp"
+        android:layout_alignTop="@+id/thumbImageView"
+        android:layout_toRightOf="@+id/thumbImageView"
+        android:layout_toLeftOf="@+id/callContainer"
+        android:layout_marginTop="0dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="7dp"
+        android:layout_marginRight="10dp"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:textSize="18sp"
+        android:textColor="@color/store_name_color"
+        android:text="美景華廈" />
+
+    <TextView
+        android:id="@+id/telTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="17dp"
+        android:layout_below="@+id/nameTextView"
+        android:layout_alignLeft="@+id/nameTextView"
+        android:layout_toLeftOf="@+id/callContainer"
+        android:layout_marginBottom="7dp"
+        android:layout_marginRight="10dp"
+        android:textSize="16sp"
+        android:textColor="@color/store_tel_color"
+        android:text="1,659萬" />
+    
+    <TextView
+        android:id="@+id/addressTextView"
+        android:layout_width="match_parent"
+        android:layout_height="17dp"
+        android:layout_below="@+id/telTextView"
+        android:layout_alignLeft="@+id/nameTextView"
+        android:layout_toLeftOf="@+id/callContainer"
+        android:layout_marginTop="6dp"
+        android:layout_marginRight="10dp"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:textSize="12sp"
+        android:textColor="@color/store_addr_color"
+        android:text="台北市大安區....................." />
+    
+    
+    <RelativeLayout
+        android:id="@+id/callContainer"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/bg_store_call" >
+
+        <TextView
+            android:id="@+id/callTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="5dp"
+            android:textColor="#535353"
+            android:textSize="12sp"
+            android:text="@string/contact_store" />
+        
+    </RelativeLayout>
+
+</RelativeLayout>

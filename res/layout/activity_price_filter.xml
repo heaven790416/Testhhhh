@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res/com.thinkermobile.sinyi"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <include layout="@layout/toolbar" />
+
+    <ScrollView
+        android:id="@+id/filterScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottomContainer"
+        android:layout_below="@+id/toolbar"
+        android:background="@color/filter_title_bg_light_color" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <LinearLayout
+                    android:id="@+id/tabContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_filter_item"
+                    android:orientation="horizontal"
+                    android:paddingBottom="1dp" >
+
+                    <Button
+                        android:id="@+id/areaTabButton"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_filter_tab_selector"
+                        android:text="地區搜尋"
+                        android:textColor="@color/filter_tab_text_color"
+                        android:textSize="16sp" />
+
+                    <Button
+                        android:id="@+id/keyTabButton"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_filter_tab_selector"
+                        android:text="捷運搜尋"
+                        android:textColor="@color/filter_tab_text_color"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/locationContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tabContainer" >
+
+                    <LinearLayout
+                        android:id="@+id/areaContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" >
+
+                        <com.yowoo.newbuyhouse.view.TitleRow
+                            android:id="@+id/areaTitleRow"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            custom:iconResource="@drawable/ic_area"
+                            custom:showMoreImage="false"
+                            custom:titleText="地區資訊" >
+                        </com.yowoo.newbuyhouse.view.TitleRow>
+
+                        <com.yowoo.newbuyhouse.view.SingleChooseRow
+                            android:id="@+id/cityRow"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            custom:titleText="縣市" >
+                        </com.yowoo.newbuyhouse.view.SingleChooseRow>
+
+                        <com.yowoo.newbuyhouse.view.SingleChooseRow
+                            android:id="@+id/areaRow"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            custom:titleText="行政區" >
+                        </com.yowoo.newbuyhouse.view.SingleChooseRow>
+
+                        <com.yowoo.newbuyhouse.view.SingleChooseRow
+                            android:id="@+id/roadRow"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            custom:titleText="選擇路段" >
+                        </com.yowoo.newbuyhouse.view.SingleChooseRow>
+
+                        <com.yowoo.newbuyhouse.view.SingleChooseRow
+                            android:id="@+id/houseAreaRow"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            custom:titleText="坪數" >
+                        </com.yowoo.newbuyhouse.view.SingleChooseRow>
+
+                        <com.yowoo.newbuyhouse.view.SingleChooseRow
+                            android:id="@+id/houseYearRow"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            custom:titleText="屋齡" >
+                        </com.yowoo.newbuyhouse.view.SingleChooseRow>
+
+                        <LinearLayout
+                            android:id="@+id/advenceContainer"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/houseInfoContainer"
+                            android:orientation="vertical" >
+
+                            <com.yowoo.newbuyhouse.view.TitleRow
+                                android:id="@+id/advanceTitleRow"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                custom:iconResource="@drawable/ic_house"
+                                custom:rowHeight="40"
+                                custom:showIcon="false"
+                                custom:showMoreImage="true"
+                                custom:titleBackground="@color/filter_title_bg_dart_color"
+                                custom:titleText="進階篩選"
+                                custom:titleTextColor="@color/white_color" >
+                            </com.yowoo.newbuyhouse.view.TitleRow>
+
+                            <LinearLayout
+                                android:id="@+id/advanceItemContainer"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical" >
+
+                                <com.yowoo.newbuyhouse.view.SingleChooseRow
+                                    android:id="@+id/advanceIntervalRow"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    custom:titleText="期間資料" >
+                                </com.yowoo.newbuyhouse.view.SingleChooseRow>
+
+                                <com.yowoo.newbuyhouse.view.SingleChooseRow
+                                    android:id="@+id/advanceTypeRow"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    custom:titleText="類型" >
+                                </com.yowoo.newbuyhouse.view.SingleChooseRow>
+
+                                <com.yowoo.newbuyhouse.view.SingleChooseRow
+                                    android:id="@+id/advanceParkingRow"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    custom:titleText="車位" >
+                                </com.yowoo.newbuyhouse.view.SingleChooseRow>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/keyContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/filter_title_bg_light_color"
+                        android:orientation="vertical"
+                        android:visibility="gone" >
+
+                        <EditText
+                            android:id="@+id/keywordEditText"
+                            android:layout_width="match_parent"
+                            android:layout_height="80dp"
+                            android:layout_marginBottom="20dp"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            android:layout_marginTop="25dp"
+                            android:background="@drawable/text_search"
+                            android:cursorVisible="true"
+                            android:hint="@string/price_keyword_hint"
+                            android:paddingLeft="15dp"
+                            android:textColor="@color/filter_gray_color"
+                            android:textColorHint="@color/filter_hint_text_color"
+                            android:textCursorDrawable="@null"
+                            android:textSize="18sp" >
+                        </EditText>
+
+                        <TextView
+                            android:id="@+id/hintTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="20dp"
+                            android:layout_marginLeft="30dp"
+                            android:text="@string/price_keyword_example"
+                            android:textColor="@color/filter_gray_color"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/moreContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/locationContainer" >
+
+                    <RelativeLayout
+                        android:id="@+id/switchConteiner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="20dp" >
+
+                        <TextView
+                            android:id="@+id/textView1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="顯示買屋資料"
+                            android:textColor="@color/filter_gray_color"
+                            android:textSize="16sp" />
+
+                        <ImageView
+                            android:id="@+id/switchImageView"
+                            android:layout_width="54dp"
+                            android:layout_height="35dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/btn_switch_selector" />
+                    </RelativeLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/bottomContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#f0f0f0"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="10dp" >
+
+        <Button
+            android:id="@+id/clearButton"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="7dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_cancel_selector"
+            android:text="@string/clear_filter" />
+
+        <Button
+            android:id="@+id/searchButton"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="7dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_green_selector"
+            android:text="@string/start_search" />
+    </LinearLayout>
+
+    <!-- Select Tool: Wheel -->
+
+    <RelativeLayout
+        android:id="@+id/shadow"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#90000000"
+        android:visibility="gone" >
+    </RelativeLayout>
+
+    <com.yowoo.newbuyhouse.view.CityWheelView
+        android:id="@+id/aeraWheelView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone" >
+    </com.yowoo.newbuyhouse.view.CityWheelView>
+
+    <com.yowoo.newbuyhouse.view.MRTWheelView
+        android:id="@+id/mrtWheelView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone" >
+    </com.yowoo.newbuyhouse.view.MRTWheelView>
+
+    <com.yowoo.newbuyhouse.view.SingleWheelView
+        android:id="@+id/singleWheelView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone" >
+    </com.yowoo.newbuyhouse.view.SingleWheelView>
+
+    <com.yowoo.newbuyhouse.view.PriceWheelView
+        android:id="@+id/priceWheelView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone" >
+    </com.yowoo.newbuyhouse.view.PriceWheelView>
+
+    <com.yowoo.newbuyhouse.view.RoomWheelView
+        android:id="@+id/roomWheelView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone" >
+    </com.yowoo.newbuyhouse.view.RoomWheelView>
+
+</RelativeLayout>

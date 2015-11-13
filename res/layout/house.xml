@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="105dp" >
+
+    <ImageView
+        android:id="@+id/thumbImageView"
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="20dp"
+        android:background="#999999" />
+
+    <TextView
+        android:id="@+id/nameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="22dp"
+        android:layout_alignTop="@+id/thumbImageView"
+        android:layout_toRightOf="@+id/thumbImageView"
+        android:layout_marginTop="-3dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="2dp"
+        android:layout_marginRight="20dp"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:textSize="16sp"
+        android:textColor="@color/house_simple_title_color"
+        android:text="美景華廈" />
+
+    <RelativeLayout
+        android:id="@+id/priceFirstContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:layout_alignLeft="@+id/nameTextView"
+        android:layout_below="@+id/nameTextView">
+        
+        <TextView
+        android:id="@+id/priceFirstTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="17dp"
+        android:layout_marginRight="10dp"
+        android:textSize="14sp"
+        android:textColor="@color/house_simple_detail_color"
+        android:text="1,659萬" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/priceTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="17dp"
+        android:layout_below="@+id/nameTextView"
+        android:layout_toRightOf="@+id/priceFirstContainer"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="3dp"
+        android:textSize="14sp"
+        android:textColor="@color/house_simple_price_color"
+        android:text="1,659萬" />
+    
+    <Button
+        android:id="@+id/discountButton"
+        android:layout_width="55dp"
+        android:layout_height="17dp"
+        android:layout_below="@+id/nameTextView"
+        android:layout_toRightOf="@+id/priceTextView"
+        android:background="@drawable/price_box"
+        android:drawableLeft="@drawable/ic_discount"  
+        android:clickable="false"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal"
+        android:textColor="@color/white_color"
+        android:textSize="10sp"
+        android:text="-1.8%" />
+    
+    <TextView
+        android:id="@+id/addressTextView"
+        android:layout_width="match_parent"
+        android:layout_height="17dp"
+        android:layout_below="@+id/priceTextView"
+        android:layout_alignLeft="@+id/nameTextView"
+        android:layout_marginTop="2dp"
+        android:layout_marginRight="20dp"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:textSize="14sp"
+        android:textColor="@color/house_simple_detail_color"
+        android:text="台北市大安區....................." />
+    
+    <TextView
+        android:id="@+id/typeTextView"
+        android:layout_width="match_parent"
+        android:layout_height="17dp"
+        android:layout_below="@+id/addressTextView"
+        android:layout_alignLeft="@+id/nameTextView"
+        android:layout_marginTop="2dp"
+        android:layout_marginRight="20dp"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:textSize="14sp"
+        android:textColor="@color/house_simple_detail_color"
+        android:text="成屋" />
+
+    <RelativeLayout
+        android:id="@+id/prevContainer"
+        android:layout_width="20dp"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:layout_alignParentLeft="true" >
+        
+        <Button
+            android:id="@+id/prevButton"
+            android:layout_width="5dp"
+            android:layout_height="10dp"
+            android:layout_centerInParent="true"
+            android:clickable="false"
+            android:background="@drawable/arrow_left" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/nextContainer"
+        android:layout_width="20dp"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:layout_alignParentRight="true" >
+        
+        <Button
+            android:id="@+id/nextButton"
+            android:layout_width="5dp"
+            android:layout_height="10dp"
+            android:layout_centerInParent="true"
+            android:clickable="false"
+            android:background="@drawable/arrow_right" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

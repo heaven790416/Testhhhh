@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:custom="http://schemas.android.com/apk/res/com.thinkermobile.sinyi"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <include layout="@layout/toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:background="@color/white_color" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <!-- Dummy item to prevent EditText from receiving focus -->
+            <LinearLayout
+                android:id="@+id/ll_dummy"
+                android:layout_width="0px"
+                android:layout_height="0px"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:orientation="vertical" >
+                <requestFocus />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll_check"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <ProgressBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="@string/checking"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="10dp" >
+
+
+
+				<com.yowoo.newbuyhouse.view.FieldRow
+                    android:id="@+id/accountFieldRow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    custom:titleTextColor="@color/login_title_color"
+                    custom:titleText="@string/member_account" >
+
+                    <EditText
+                        android:id="@+id/accountEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:layout_marginLeft="50dp"
+                        android:hint="手機、Email或至少6個英數單位"
+                        android:textColorHint="@color/form_text_hint_color"
+                        android:inputType="text"
+                        android:paddingLeft="0dp"
+                        android:textColor="@color/login_title_color"
+                        android:textSize="16sp" 
+                        android:layout_marginTop="7dp"
+                        android:cursorVisible="true"
+                    		android:textCursorDrawable="@null"/>
+                </com.yowoo.newbuyhouse.view.FieldRow>
+                
+				<com.yowoo.newbuyhouse.view.FieldRow
+                    android:id="@+id/passwordFieldRow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    custom:titleTextColor="@color/login_title_color"
+                    custom:titleText="@string/member_password" >
+
+                    <EditText
+                        android:id="@+id/passwordEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="50dp"
+                        android:layout_toLeftOf="@+id/viewButton"
+                        android:gravity="center_vertical"
+                        android:hint="4-12個英數字元"
+                        android:textColorHint="@color/form_text_hint_color"
+                        android:inputType="textPassword"
+                        android:paddingLeft="0dp"
+                        android:textColor="@color/login_title_color"
+                        android:textSize="16sp"
+                        android:layout_marginTop="7dp"
+                        android:cursorVisible="true"
+                    		android:textCursorDrawable="@null" />
+                    
+                    <Button
+                        android:id="@+id/viewButton"
+                        android:layout_width="20dp"
+                        android:layout_height="12dp"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/ic_password_view" />
+
+                </com.yowoo.newbuyhouse.view.FieldRow>
+                
+				<com.yowoo.newbuyhouse.view.FieldRow
+                    android:id="@+id/confirmFieldRow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    custom:titleTextColor="@color/login_title_color"
+                    custom:titleText="再次輸入密碼" >
+
+                    <EditText
+                        android:id="@+id/confirmEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:layout_marginLeft="100dp"
+                        android:hint="@string/account_hint"
+                        android:paddingLeft="0dp"
+                        android:textColor="@color/login_title_color"
+                        android:textSize="16sp"
+                        android:inputType="textPassword"
+                        android:layout_marginTop="7dp"
+                        android:cursorVisible="true"
+                    		android:textCursorDrawable="@null" />
+                </com.yowoo.newbuyhouse.view.FieldRow>
+                
+				<RelativeLayout
+	                android:layout_width="match_parent"
+	                android:layout_height="wrap_content"
+	                android:paddingLeft="0dp"
+	                android:paddingTop="10dp" >
+	
+	                <LinearLayout
+	                    android:id="@+id/lawContainer"
+	                    android:layout_width="match_parent"
+	                    android:layout_height="wrap_content"
+	                    android:orientation="horizontal" >
+	
+	                    <ImageView
+	                        android:id="@+id/checkImageView"
+	                        android:layout_width="15dp"
+	                        android:layout_height="15dp"
+	                        android:layout_marginLeft="10dp"
+	                        android:background="@drawable/tick_off" />
+	
+	                    <TextView
+	                        android:id="@+id/lawTextView"
+	                        android:text="我已閱讀並同意APP的服務條款"
+	                        android:layout_width="match_parent"
+	                        android:layout_height="wrap_content"
+	                        android:layout_marginLeft="10dp"
+	                        android:textColor="@color/form_text_color" />
+	                </LinearLayout>
+	                
+<!-- 	                <TextView -->
+<!-- 	                    android:id="@+id/explaneTextView" -->
+<!-- 	                    android:layout_width="match_parent" -->
+<!-- 	                    android:layout_height="wrap_content" -->
+<!-- 	                    android:layout_below="@+id/lawContainer" -->
+<!-- 	                    android:layout_marginTop="15dp" -->
+<!-- 	                    android:text="" -->
+<!-- 	                    android:textSize="16sp" -->
+<!-- 	                    android:textColor="@color/form_explane_text_color" /> -->
+	
+	          
+	            </RelativeLayout>
+
+				<Button
+                    android:id="@+id/sendButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/btn_green_selector"
+                    android:text="@string/send"
+                    android:textColor="#ffffff"
+                    android:textSize="18sp" />
+				
+				<LinearLayout
+	                    android:id="@+id/contactServiceContainer"
+	                    android:layout_width="match_parent"
+	                    android:layout_height="wrap_content"
+	                    android:orientation="horizontal" 
+	                    android:gravity="center">
+				
+					<TextView
+	                    android:id="@+id/contactServiceTextView"
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="40dp"
+	                    android:gravity="center"
+	                    android:textColor="@color/login_title_color"
+	                    android:textSize="14sp"
+	                    android:text="聯絡客服" />
+					
+					<TextView
+	                    android:id="@+id/DashTextView"
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="40dp"
+	                    android:gravity="center"
+	                    android:textColor="@color/login_title_color"
+	                    android:textSize="14sp"
+	                    android:text="  |  " />
+					
+					<TextView
+	                    android:id="@+id/LoginServiceTextView"
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="40dp"
+	                    android:gravity="center"
+	                    android:textColor="@color/login_title_color"
+	                    android:textSize="14sp"
+	                    android:text="會員登入" />
+				
+				</LinearLayout>
+
+                
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res/com.thinkermobile.sinyi"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:id="@+id/root" >
+
+    <com.yowoo.newbuyhouse.view.InfoRow
+        android:id="@+id/mrtTitleInfoRow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        custom:titleText="@string/mrt_info">
+    </com.yowoo.newbuyhouse.view.InfoRow>
+
+    <LinearLayout
+        android:id="@+id/stationContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/showContainer"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/white_color" >
+
+        <TextView
+            android:id="@+id/showTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@color/detail_info_text_color"
+            android:text="@string/show_more" />
+
+    </RelativeLayout>
+
+</LinearLayout>

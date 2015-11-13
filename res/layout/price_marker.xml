@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+ 
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="94dp"
+        android:layout_height="27dp"
+        android:background="@drawable/pin_price" />
+ 
+    <TextView
+        android:id="@+id/countTextView"
+        android:layout_width="20dp"
+        android:layout_height="14dp"
+        android:background="@color/white_color"
+        android:gravity="center"
+        android:layout_marginLeft="3dp"
+        android:layout_marginTop="3dp"
+        android:text="111"
+        android:textColor="@color/pin_price_color"
+        android:textSize="10sp"
+        android:textStyle="bold" />
+    
+    <TextView
+        android:id="@+id/unitPriceTextView"
+        android:layout_width="65dp"
+        android:layout_height="14dp"
+        android:layout_toRightOf="@+id/countTextView"
+        android:layout_marginTop="2dp"
+        android:gravity="center"
+        android:layout_marginLeft="3dp"
+        android:text="105.5萬/坪"
+        android:textColor="@color/white_color"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+ 
+</RelativeLayout>

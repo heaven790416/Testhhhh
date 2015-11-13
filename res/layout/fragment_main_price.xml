@@ -1,0 +1,142 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+	
+	<!-- for detect touch event -->
+    <com.yowoo.newbuyhouse.fragment.TouchableWrapper
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+    		
+        <fragment
+    		    android:id="@+id/listFragment"
+    		    android:name="com.yowoo.newbuyhouse.fragment.MainPriceListFragment"
+    		    android:layout_width="match_parent"
+    		    android:layout_height="match_parent" />
+
+        <fragment
+            android:id="@+id/map"
+            android:name="com.yowoo.newbuyhouse.fragment.MyMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+	
+	</com.yowoo.newbuyhouse.fragment.TouchableWrapper>
+
+    <RelativeLayout
+        android:id="@+id/bottomContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" >
+
+        <com.yowoo.newbuyhouse.view.OrderView
+            android:id="@+id/orderView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_above="@+id/menuContainer" >
+        </com.yowoo.newbuyhouse.view.OrderView>
+
+        <RelativeLayout
+            android:id="@+id/menuContainer"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:clickable="true"
+            android:background="#ccffffff" >
+            
+            <RelativeLayout
+                android:id="@+id/leftContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="10dp"
+                android:layout_centerVertical="true" >
+                
+                <Button
+                    android:id="@+id/leftButton"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:clickable="false"
+                    android:background="@drawable/ic_site"
+                    android:layout_marginRight="3dp"
+                    android:text="" />
+
+                <TextView
+                    android:id="@+id/leftTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/leftButton"
+                    android:layout_centerVertical="true"
+                    android:textColor="#657380"
+                    android:text="目前位置" />
+
+            </RelativeLayout>
+            
+            <RelativeLayout
+                android:id="@+id/rightContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:layout_centerVertical="true" >
+                
+                <Button
+                    android:id="@+id/rightButton"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:clickable="false"
+                    android:layout_marginRight="3dp"
+                    android:background="@drawable/ic_list" />
+
+                <TextView
+                    android:id="@+id/rightTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/rightButton"
+                    android:layout_centerVertical="true"
+                    android:textColor="#657380"
+                    android:text="切換成列表" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+    	
+    <android.support.v4.view.ViewPager
+        android:id="@+id/housePager"
+        android:layout_width="match_parent"
+        android:layout_height="105dp"
+        android:visibility="gone"
+        android:layout_alignParentBottom="true" />
+    
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pricePager"
+        android:layout_width="match_parent"
+        android:layout_height="132dp"
+        android:visibility="gone"
+        android:layout_alignParentBottom="true" />
+
+    <RelativeLayout
+        android:id="@+id/remarkContainer2"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#88000000"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/remarkTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:textSize="16sp"
+            android:textColor="@color/white_color"
+            android:layout_centerVertical="true"
+            android:text="@string/remark_outlier" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

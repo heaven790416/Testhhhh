@@ -1,0 +1,552 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:custom="http://schemas.android.com/apk/res/com.thinkermobile.sinyi"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <include layout="@layout/toolbar" />
+
+    <com.nirhart.parallaxscroll.views.ParallaxScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:layout_above="@+id/bottomContainer"
+        app:alpha_factor="1.9"
+        app:parallax_factor="1.9" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <com.yowoo.newbuyhouse.view.ImageDisplayView
+                android:id="@+id/imageDisplayView"
+                android:layout_width="match_parent"
+                android:layout_height="250dp" >
+            </com.yowoo.newbuyhouse.view.ImageDisplayView>
+
+            <LinearLayout
+                android:id="@+id/detailContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <!-- 互動看屋/社區公設 -->
+
+                <LinearLayout
+                    android:id="@+id/vrContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_filter_item"
+                    android:orientation="horizontal"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:paddingTop="10dp" >
+
+                    <Button
+                        android:id="@+id/vrInteractButton"
+                        android:layout_width="0dp"
+                        android:layout_height="35dp"
+                        android:layout_marginRight="7dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/btn_gray_selector"
+                        android:textColor="@color/detail_text_color"
+                        android:text="@string/interact" />
+
+                    <Button
+                        android:id="@+id/vrPublicButton"
+                        android:layout_width="0dp"
+                        android:layout_height="35dp"
+                        android:layout_marginLeft="7dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/btn_gray_selector"
+                        android:textColor="@color/detail_text_color"
+                        android:text="@string/community_public" />
+                </LinearLayout>
+
+                <!-- 簡介 -->
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white_color"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp" >
+
+                    <TextView
+                        android:id="@+id/nameTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="22dp"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginRight="20dp"
+                        android:text="美景華廈"
+                        android:textColor="@color/house_simple_title_color"
+                        android:textSize="16sp" />
+
+                    <RelativeLayout
+                        android:id="@+id/priceFirstContainer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/nameTextView"
+                        android:layout_below="@+id/nameTextView" >
+
+                        <TextView
+                            android:id="@+id/priceFirstTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="17dp"
+                            android:layout_marginRight="10dp"
+                            android:text="1,659萬"
+                            android:textColor="@color/house_simple_detail_color"
+                            android:textSize="14sp" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/priceTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="17dp"
+                        android:layout_below="@+id/nameTextView"
+                        android:layout_marginBottom="12dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_toRightOf="@+id/priceFirstContainer"
+                        android:text="1,659萬"
+                        android:textColor="@color/house_simple_price_color"
+                        android:textSize="14sp" />
+
+                    <Button
+                        android:id="@+id/discountButton"
+                        android:layout_width="55dp"
+                        android:layout_height="17dp"
+                        android:layout_below="@+id/nameTextView"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_toRightOf="@+id/priceTextView"
+                        android:background="@drawable/price_box"
+                        android:clickable="false"
+                        android:drawableLeft="@drawable/ic_discount"
+                        android:gravity="center_horizontal"
+                        android:text="-1.8%"
+                        android:textColor="@color/white_color"
+                        android:textSize="10sp" />
+                    
+                    <!-- <Button
+                        android:id="@+id/chatButton"
+                        android:layout_width="70dp"
+                        android:layout_height="30dp"
+                        android:layout_below="@+id/priceTextView"
+                        android:layout_marginRight="7dp"
+                        android:background="@drawable/btn_white_selector"
+                        android:textColor="#939393"
+                        android:textSize="12sp"
+                        android:text="@string/contact_service" /> -->
+                    
+                    <Button
+                        android:id="@+id/callButton"
+                        android:layout_width="70dp"
+                        android:layout_height="30dp"
+                        android:layout_below="@+id/priceTextView"
+                        android:background="@drawable/btn_white_selector"
+                        android:textColor="#939393"
+                        android:textSize="12sp"
+                        android:text="@string/call" />
+
+                </RelativeLayout>
+
+                <!-- 格局圖 -->
+
+                <LinearLayout
+                    android:id="@+id/layoutContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/detail_bg_color"
+                    android:orientation="vertical"
+                    android:padding="10dp" >
+
+                    <com.yowoo.newbuyhouse.view.TitleRow
+                        android:id="@+id/layoutTitleRow"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        custom:iconResource="@drawable/ic_house"
+                        custom:showIcon="false"
+                        custom:showMoreImage="false"
+                        custom:titleBackground="@color/detail_title_bg_color"
+                        custom:titleText="@string/layout_image"
+                        custom:titleTextColor="@color/white_color" >
+                    </com.yowoo.newbuyhouse.view.TitleRow>
+
+                    <ImageView
+                        android:id="@+id/layoutImageView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitStart"
+                        android:src="@drawable/placeholder_bigimg" />
+
+                </LinearLayout>
+
+                <!-- 物件描述 -->
+
+                <LinearLayout
+                    android:id="@+id/descriptionContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/detail_bg_color"
+                    android:orientation="vertical"
+                    android:padding="10dp" >
+
+                    <com.yowoo.newbuyhouse.view.TitleRow
+                        android:id="@+id/descriptionTitleRow"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        custom:iconResource="@drawable/ic_house"
+                        custom:showIcon="false"
+                        custom:showMoreImage="false"
+                        custom:titleBackground="@color/detail_title_bg_color"
+                        custom:titleText="@string/description"
+                        custom:titleTextColor="@color/white_color" >
+                    </com.yowoo.newbuyhouse.view.TitleRow>
+
+                    <TextView
+                        android:id="@+id/descriptionTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white_color"
+                        android:padding="10dp"
+                        android:lineSpacingMultiplier="1.3"
+                        android:text=""
+                        android:textColor="@color/detail_text_color" />
+                </LinearLayout>
+
+                <!-- 基本資料 -->
+
+                <LinearLayout
+                    android:id="@+id/basicContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/detail_bg_color"
+                    android:orientation="vertical"
+                    android:padding="10dp" >
+
+                    <com.yowoo.newbuyhouse.view.TitleRow
+                        android:id="@+id/basicTitleRow"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        custom:iconResource="@drawable/ic_house"
+                        custom:showIcon="false"
+                        custom:showMoreImage="false"
+                        custom:titleBackground="@color/detail_title_bg_color"
+                        custom:titleText="@string/basic_info"
+                        custom:titleTextColor="@color/white_color" >
+                    </com.yowoo.newbuyhouse.view.TitleRow>
+
+                    <com.yowoo.newbuyhouse.view.InfoRow
+                        android:id="@+id/communityInfoRow"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        custom:titleText="@string/community" >
+                    </com.yowoo.newbuyhouse.view.InfoRow>
+                    
+                    <com.yowoo.newbuyhouse.view.InfoRow
+                        android:id="@+id/addressInfoRow"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        custom:titleText="@string/address" >
+                    </com.yowoo.newbuyhouse.view.InfoRow>
+
+                    <com.yowoo.newbuyhouse.view.InfoRow
+                        android:id="@+id/layoutInfoRow"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        custom:titleText="@string/layout" >
+                    </com.yowoo.newbuyhouse.view.InfoRow>
+
+                    <com.yowoo.newbuyhouse.view.InfoRow
+                        android:id="@+id/areaBuildingInfoRow"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        custom:titleText="@string/area_building" >
+                    </com.yowoo.newbuyhouse.view.InfoRow>
+
+                    <com.yowoo.newbuyhouse.view.InfoRow
+                        android:id="@+id/areaLandInfoRow"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        custom:titleText="@string/area_land" >
+                    </com.yowoo.newbuyhouse.view.InfoRow>
+
+                    <LinearLayout
+                        android:id="@+id/pingDetailContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" >
+                    </LinearLayout>
+
+                    <com.yowoo.newbuyhouse.view.InfoRow
+                        android:id="@+id/areaPublicInfoRow"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        custom:titleText="@string/area_public" >
+                    </com.yowoo.newbuyhouse.view.InfoRow>
+
+                    <com.yowoo.newbuyhouse.view.InfoRow
+                        android:id="@+id/ageInfoRow"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        custom:titleText="@string/age" >
+                    </com.yowoo.newbuyhouse.view.InfoRow>
+
+                    <com.yowoo.newbuyhouse.view.InfoRow
+                        android:id="@+id/floorInfoRow"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        custom:titleText="@string/floor" >
+                    </com.yowoo.newbuyhouse.view.InfoRow>
+
+                    <com.yowoo.newbuyhouse.view.InfoRow
+                        android:id="@+id/familyInfoRow"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        custom:titleText="@string/family" >
+                    </com.yowoo.newbuyhouse.view.InfoRow>
+
+                    <com.yowoo.newbuyhouse.view.InfoRow
+                        android:id="@+id/faceInfoRow"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        custom:titleText="@string/face" >
+                    </com.yowoo.newbuyhouse.view.InfoRow>
+
+                    <com.yowoo.newbuyhouse.view.InfoRow
+                        android:id="@+id/typeInfoRow"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        custom:titleText="@string/type" >
+                    </com.yowoo.newbuyhouse.view.InfoRow>
+
+                    <com.yowoo.newbuyhouse.view.InfoRow
+                        android:id="@+id/securityInfoRow"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        custom:titleText="@string/security" >
+                    </com.yowoo.newbuyhouse.view.InfoRow>
+
+                    <com.yowoo.newbuyhouse.view.InfoRow
+                        android:id="@+id/monthlyFeeInfoRow"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        custom:titleText="@string/monthly_fee" >
+                    </com.yowoo.newbuyhouse.view.InfoRow>
+
+                    <com.yowoo.newbuyhouse.view.InfoRow
+                        android:id="@+id/sideDarkInfoRow"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        custom:titleText="@string/side_dark" >
+                    </com.yowoo.newbuyhouse.view.InfoRow>
+
+                    <com.yowoo.newbuyhouse.view.InfoRow
+                        android:id="@+id/buildingStructureInfoRow"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        custom:titleText="@string/building_structure" >
+                    </com.yowoo.newbuyhouse.view.InfoRow>
+
+                    <com.yowoo.newbuyhouse.view.InfoRow
+                        android:id="@+id/wallStructureInfoRow"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        custom:titleText="@string/wall_structure" >
+                    </com.yowoo.newbuyhouse.view.InfoRow>
+
+                    <com.yowoo.newbuyhouse.view.InfoRow
+                        android:id="@+id/parkingInfoRow"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        custom:titleText="@string/parking" >
+                    </com.yowoo.newbuyhouse.view.InfoRow>
+                </LinearLayout>
+
+                <!-- 生活機能 -->
+
+                <LinearLayout
+                    android:id="@+id/liveInfoContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/detail_bg_color"
+                    android:orientation="vertical"
+                    android:padding="10dp" >
+
+                    <com.yowoo.newbuyhouse.view.TitleRow
+                        android:id="@+id/liveInfoTitleRow"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        custom:iconResource="@drawable/ic_house"
+                        custom:showIcon="false"
+                        custom:showMoreImage="false"
+                        custom:titleBackground="@color/detail_title_bg_color"
+                        custom:titleText="@string/live_info"
+                        custom:titleTextColor="@color/white_color" >
+                    </com.yowoo.newbuyhouse.view.TitleRow>
+
+                    <com.yowoo.newbuyhouse.view.InfoRow
+                        android:id="@+id/primarySchoolInfoRow"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        custom:titleText="@string/primary_school" >
+                    </com.yowoo.newbuyhouse.view.InfoRow>
+
+                    <com.yowoo.newbuyhouse.view.InfoRow
+                        android:id="@+id/juniorSchoolInfoRow"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        custom:titleText="@string/junior_school" >
+                    </com.yowoo.newbuyhouse.view.InfoRow>
+
+                    <com.yowoo.newbuyhouse.view.InfoRow
+                        android:id="@+id/marketInfoRow"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        custom:titleText="@string/market" >
+                    </com.yowoo.newbuyhouse.view.InfoRow>
+
+                    <com.yowoo.newbuyhouse.view.InfoRow
+                        android:id="@+id/gardenInfoRow"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        custom:titleText="@string/garden" >
+                    </com.yowoo.newbuyhouse.view.InfoRow>
+
+                    <com.yowoo.newbuyhouse.view.MRTInfoRow
+                        android:id="@+id/mrtInfoRow"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" >
+                    </com.yowoo.newbuyhouse.view.MRTInfoRow>
+
+                </LinearLayout>
+
+                <!-- 物件地圖 -->
+
+                <LinearLayout
+                    android:id="@+id/mapContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/detail_bg_color"
+                    android:orientation="vertical"
+                    android:padding="10dp" >
+
+                    <com.yowoo.newbuyhouse.view.TitleRow
+                        android:id="@+id/mapTitleRow"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        custom:iconResource="@drawable/ic_house"
+                        custom:showIcon="false"
+                        custom:showMoreImage="false"
+                        custom:titleBackground="@color/detail_title_bg_color"
+                        custom:titleText="@string/house_map"
+                        custom:titleTextColor="@color/white_color" >
+                    </com.yowoo.newbuyhouse.view.TitleRow>
+
+                    <ImageView
+                        android:id="@+id/mapImageView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitStart"
+                        android:src="@drawable/ic_launcher" />
+                </LinearLayout>
+
+                <!-- 業務聯絡 -->
+
+                <LinearLayout
+                    android:id="@+id/contactContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/detail_bg_color"
+                    android:orientation="vertical"
+                    android:padding="10dp" >
+
+                    <com.yowoo.newbuyhouse.view.TitleRow
+                        android:id="@+id/contactTitleRow"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        custom:iconResource="@drawable/ic_house"
+                        custom:showIcon="false"
+                        custom:showMoreImage="false"
+                        custom:titleBackground="@color/detail_title_bg_color"
+                        custom:titleText="@string/contact"
+                        custom:titleTextColor="@color/white_color" >
+                    </com.yowoo.newbuyhouse.view.TitleRow>
+
+                    <com.yowoo.newbuyhouse.view.InfoRow
+                        android:id="@+id/storeInfoRow"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        custom:titleText="@string/store" >
+                    </com.yowoo.newbuyhouse.view.InfoRow>
+
+                    <com.yowoo.newbuyhouse.view.InfoRow
+                        android:id="@+id/storeTelInfoRow"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        custom:titleText="@string/store_tel" >
+                    </com.yowoo.newbuyhouse.view.InfoRow>
+
+                    <com.yowoo.newbuyhouse.view.InfoRow
+                        android:id="@+id/storeAddressInfoRow"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        custom:titleText="@string/store_address" >
+                    </com.yowoo.newbuyhouse.view.InfoRow>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </com.nirhart.parallaxscroll.views.ParallaxScrollView>
+    
+    <LinearLayout
+        android:id="@+id/bottomContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#333333"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:paddingBottom="10dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="10dp" >
+
+        <Button
+            android:id="@+id/favButton"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_marginRight="7dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_black_selector"
+            android:text="@string/fav"
+            android:textColor="@color/white_color" />
+        	
+        <Button
+            android:id="@+id/sendSalesmanButton"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_marginRight="7dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_black_selector"
+            android:text="@string/call_salesman"
+            android:textColor="@color/white_color" />
+
+        <Button
+            android:id="@+id/reservationButton"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="7dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_red_selector"
+            android:text="@string/reservation"
+            android:textColor="@color/white_color" />
+    </LinearLayout>
+
+</RelativeLayout>

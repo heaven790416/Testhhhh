@@ -1,0 +1,115 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e6e6e6" >
+
+    <include layout="@layout/toolbar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar" >
+
+        <RelativeLayout
+            android:id="@+id/houseCountContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:visibility="gone" >
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="共有 "
+                android:textColor="#a0a0a0" />
+
+            <TextView
+                android:id="@+id/totalTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/textView1"
+                android:text="0"
+                android:textColor="#019483" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/totalTextView"
+                android:text=" 間房屋"
+                android:textColor="#a0a0a0" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/noResultContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone" >
+
+            <ImageView
+                android:id="@+id/noResultImageView"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/favorite_photo" />
+
+            	<TextView
+                android:id="@+id/noResultTitleTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/noResultImageView"
+                android:layout_centerHorizontal="true"
+                android:lineSpacingExtra="7dp"
+                android:textSize="30dp"
+                android:text="@string/no_any_collect"
+                android:textColor="#959595" />
+            	
+            <TextView
+                android:id="@+id/noResultTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/noResultTitleTextView"
+                android:gravity="center_horizontal"
+                android:lineSpacingExtra="7dp"
+                android:layout_marginTop="20dp"
+                android:layout_centerHorizontal="true"
+                android:text="@string/no_collect_remind"
+                android:textColor="#959595" />
+        </RelativeLayout>
+
+        <com.handmark.pulltorefresh.library.PullToRefreshListView
+            android:id="@+id/houseListview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/bottomContainer"
+            android:divider="@null"
+            android:dividerHeight="0dp" />
+
+        <RelativeLayout
+            android:id="@+id/bottomContainer"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:visibility="gone"
+            android:layout_alignParentBottom="true"
+            android:padding="10dp">
+            
+            <Button
+                android:id="@+id/deleteButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:text="@string/delete_select_content"
+                android:textColor="@color/white_color"
+                android:background="@drawable/btn_green_selector" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

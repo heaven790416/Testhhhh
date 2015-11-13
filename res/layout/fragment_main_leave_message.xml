@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res/com.thinkermobile.sinyi"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/form_bg_color" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp" >
+
+                <TextView
+                    android:id="@+id/introTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingMultiplier="1.2"
+                    android:textColor="@color/form_text_color"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+            <com.yowoo.newbuyhouse.view.TitleRow
+                android:id="@+id/areaTitleRow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                custom:iconResource="@drawable/ic_area"
+                custom:showMoreImage="false"
+                custom:titleText="買屋需求（請最少選擇一組條件）" >
+            </com.yowoo.newbuyhouse.view.TitleRow>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/form_explane_text_color"
+                android:padding="10dp" >
+
+                <TextView
+                    android:id="@+id/selectRegionTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingMultiplier="1.2"
+                    android:text="指定區域"
+                    android:textColor="@color/white_color"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/areaContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <com.yowoo.newbuyhouse.view.SingleChooseRow
+                    android:id="@+id/cityRow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    custom:titleText="縣市" >
+                </com.yowoo.newbuyhouse.view.SingleChooseRow>
+
+                <com.yowoo.newbuyhouse.view.SingleChooseRow
+                    android:id="@+id/areaRow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    custom:titleText="行政區" >
+                </com.yowoo.newbuyhouse.view.SingleChooseRow>
+            </LinearLayout>
+
+            <com.yowoo.newbuyhouse.view.SingleChooseRow
+                android:id="@+id/roadRow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                custom:titleText="路/段" >
+            </com.yowoo.newbuyhouse.view.SingleChooseRow>
+
+            <com.yowoo.newbuyhouse.view.TitleRow
+                android:id="@+id/demandTitleRow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                custom:iconResource="@drawable/ic_text_message"
+                custom:showMoreImage="false"
+                custom:titleText="其他需求說明" >
+            </com.yowoo.newbuyhouse.view.TitleRow>
+
+            <RelativeLayout
+                android:id="@+id/OtherDemandRow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/white_color" >
+
+                <EditText
+                    android:id="@+id/OtherDemandEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:cursorVisible="true"
+                    android:gravity="left"
+                    android:hint="輸入你要的需求"
+                    android:text=""
+                    android:textColor="@color/form_text_color"
+                    android:textColorHint="@color/form_text_hint_color"
+                    android:textCursorDrawable="@null"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+            <com.yowoo.newbuyhouse.view.TitleRow
+                android:id="@+id/contactTitleRow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                custom:iconResource="@drawable/ic_text_user"
+                custom:showMoreImage="false"
+                custom:titleText="聯絡資料" >
+            </com.yowoo.newbuyhouse.view.TitleRow>
+
+            <com.yowoo.newbuyhouse.view.SingleChooseRow
+                android:id="@+id/nameRow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                custom:showDetailText="false"
+                custom:showMoreImage="false"
+                custom:titleText="@string/name" >
+
+                <EditText
+                    android:id="@+id/nameEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="100dp"
+                    android:layout_marginRight="20dp"
+                    android:cursorVisible="true"
+                    android:gravity="right"
+                    android:hint="必填"
+                    android:text=""
+                    android:textColor="@color/form_text_color"
+                    android:textColorHint="@color/form_text_hint_color"
+                    android:textCursorDrawable="@null"
+                    android:textSize="16sp" />
+            </com.yowoo.newbuyhouse.view.SingleChooseRow>
+
+            <com.yowoo.newbuyhouse.view.SingleChooseRow
+                android:id="@+id/genderRow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                custom:showDetailText="false"
+                custom:showMoreImage="false"
+                custom:titleText="@string/gender" >
+
+                <RadioGroup
+                    android:id="@+id/genderGroup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="22dp"
+                    android:orientation="horizontal" >
+
+                    <RadioButton
+                        android:id="@+id/maleRadioButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:button="@null"
+                        android:checked="true"
+                        android:drawableLeft="@drawable/radio_selector"
+                        android:drawablePadding="5dp"
+                        android:text="@string/gender_male"
+                        android:textColor="@color/form_text_color"
+                        android:textSize="16sp" />
+
+                    <RadioButton
+                        android:id="@+id/femaleRadioButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:button="@null"
+                        android:drawableLeft="@drawable/radio_selector"
+                        android:drawablePadding="5dp"
+                        android:text="@string/gender_female"
+                        android:textColor="@color/form_text_color"
+                        android:textSize="16sp" />
+                </RadioGroup>
+            </com.yowoo.newbuyhouse.view.SingleChooseRow>
+
+            <com.yowoo.newbuyhouse.view.SingleChooseRow
+                android:id="@+id/phoneRow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                custom:showDetailText="false"
+                custom:showMoreImage="false"
+                custom:titleText="@string/phone" >
+
+                <EditText
+                    android:id="@+id/phoneEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="100dp"
+                    android:layout_marginRight="20dp"
+                    android:cursorVisible="true"
+                    android:gravity="right"
+                    android:hint="必填"
+                    android:text=""
+                    android:textColor="@color/form_text_color"
+                    android:textColorHint="@color/form_text_hint_color"
+                    android:textCursorDrawable="@null"
+                    android:textSize="16sp" />
+            </com.yowoo.newbuyhouse.view.SingleChooseRow>
+
+            <com.yowoo.newbuyhouse.view.SingleChooseRow
+                android:id="@+id/emailRow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                custom:showDetailText="false"
+                custom:showMoreImage="false"
+                custom:titleText="@string/email" >
+
+                <EditText
+                    android:id="@+id/emailEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="100dp"
+                    android:layout_marginRight="20dp"
+                    android:cursorVisible="true"
+                    android:gravity="right"
+                    android:text=""
+                    android:textColor="@color/form_text_color"
+                    android:textColorHint="@color/form_text_hint_color"
+                    android:textCursorDrawable="@null"
+                    android:textSize="16sp" />
+            </com.yowoo.newbuyhouse.view.SingleChooseRow>
+
+            <com.yowoo.newbuyhouse.view.SingleChooseRow
+                android:id="@+id/dateRow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                custom:showDetailText="false"
+                custom:showMoreImage="false"
+                custom:titleText="@string/contact_date" >
+
+                <TextView
+                    android:id="@+id/dateTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dp"
+                    android:text="2015-10-10"
+                    android:textColor="@color/form_text_color"
+                    android:textSize="16sp" />
+            </com.yowoo.newbuyhouse.view.SingleChooseRow>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp" >
+
+                <LinearLayout
+                    android:id="@+id/lawContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:id="@+id/checkImageView"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/tick_off" />
+
+                    <TextView
+                        android:id="@+id/lawTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="我已閱讀並同意APP的服務條款"
+                        android:textColor="@color/form_text_color" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/explaneTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/lawContainer"
+                    android:layout_marginTop="15dp"
+                    android:text=""
+                    android:textColor="@color/form_explane_text_color"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/sendButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/explaneTextView"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/btn_green_selector"
+                    android:text="@string/send_reservation" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Select Tool: Wheel -->
+
+    <RelativeLayout
+        android:id="@+id/shadow"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#90000000"
+        android:visibility="gone" >
+    </RelativeLayout>
+
+    <com.yowoo.newbuyhouse.view.CityWheelView
+        android:id="@+id/aeraWheelView"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone" >
+    </com.yowoo.newbuyhouse.view.CityWheelView>
+
+    <com.yowoo.newbuyhouse.view.CityWheelView
+        android:id="@+id/roadWheelView"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone" >
+    </com.yowoo.newbuyhouse.view.CityWheelView>
+
+    <com.yowoo.newbuyhouse.view.SingleWheelView
+        android:id="@+id/singleWheelView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone" >
+    </com.yowoo.newbuyhouse.view.SingleWheelView>
+
+</RelativeLayout>

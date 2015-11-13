@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white_color" >
+
+
+    <RelativeLayout
+        android:id="@+id/topContainer"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:padding="10dp" >
+        
+        <RelativeLayout
+            android:id="@+id/unitPriceContainer"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:padding="3dp"
+            android:layout_alignParentRight="true"
+            android:background="@color/price_green_color" >
+            
+            <TextView
+                android:id="@+id/unitPriceTextView"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="50萬"
+                android:textSize="17sp"
+                android:textColor="@color/white_color" />
+            
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:text="/坪"
+                android:textSize="11sp"
+                android:textColor="@color/white_color" />
+
+    		</RelativeLayout>
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:textStyle="bold"
+            android:textColor="@color/price_title_color"
+            android:text="@string/deal_price" />
+        
+        
+        <TextView
+            android:id="@+id/priceTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/textView1"
+            android:layout_toLeftOf="@+id/unitPriceContainer"
+            android:textColor="@color/house_simple_price_color"
+            android:text="3000萬" />
+        
+        <TextView
+            android:id="@+id/addressTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/priceTextView"
+            android:layout_marginTop="4dp"
+            android:layout_toLeftOf="@+id/unitPriceContainer"
+            android:textColor="@color/price_title_color"
+            android:text="台北市光復南路" />
+
+    </RelativeLayout>
+    
+    <RelativeLayout
+        android:id="@+id/split0"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/topContainer"
+        android:background="@color/price_split_color" />
+
+    <LinearLayout
+        android:id="@+id/bottomContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="0dp"
+        android:layout_below="@+id/split0" >
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" >
+            
+            <TextView
+                android:id="@+id/titleTextView1"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:background="@color/price_bg_color"
+                android:gravity="center"
+                android:textSize="12dp"
+                android:text="@string/sold_date"
+                android:textColor="@color/price_title_color" />
+            
+            <RelativeLayout
+                android:id="@+id/split1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/titleTextView1"
+                android:background="@color/price_split_color" />
+            
+            <TextView
+                android:id="@+id/contentTextView1"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/split1"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textSize="13dp"
+                android:text="10年"
+                android:textColor="@color/price_green_color" />
+
+        </RelativeLayout>
+        
+        <RelativeLayout
+            android:id="@+id/split_v1"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/price_split_color" />
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" >
+            
+            <TextView
+                android:id="@+id/titleTextView2"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:background="@color/price_bg_color"
+                android:gravity="center"
+                android:textSize="12dp"
+                android:text="@string/area_building"
+                android:textColor="@color/price_title_color" />
+            
+            <RelativeLayout
+                android:id="@+id/split2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/titleTextView2"
+                android:background="@color/price_split_color" />
+            
+            <TextView
+                android:id="@+id/contentTextView2"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/split2"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textSize="13dp"
+                android:text="@string/layout"
+                android:textColor="@color/price_green_color" />
+
+        </RelativeLayout>
+        
+        <RelativeLayout
+            android:id="@+id/split_v2"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/price_split_color" />
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" >
+            
+            <TextView
+                android:id="@+id/titleTextView3"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:background="@color/price_bg_color"
+                android:gravity="center"
+                android:textSize="12dp"
+                android:text="@string/age"
+                android:textColor="@color/price_title_color" />
+            
+            <RelativeLayout
+                android:id="@+id/split3"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/titleTextView3"
+                android:background="@color/price_split_color" />
+            
+            <TextView
+                android:id="@+id/contentTextView3"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/split3"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textSize="13dp"
+                android:text="@string/layout"
+                android:textColor="@color/price_green_color" />
+
+        </RelativeLayout>
+        
+        <RelativeLayout
+            android:id="@+id/split_v3"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/price_split_color" />
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" >
+            
+            <TextView
+                android:id="@+id/titleTextView4"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:background="@color/price_bg_color"
+                android:gravity="center"
+                android:textSize="12dp"
+                android:text="@string/type"
+                android:textColor="@color/price_title_color" />
+            
+            <RelativeLayout
+                android:id="@+id/split4"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/titleTextView4"
+                android:background="@color/price_split_color" />
+            
+            <TextView
+                android:id="@+id/contentTextView4"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/split4"
+                android:gravity="center"
+                android:lineSpacingMultiplier="1.2"
+                android:textStyle="bold"
+                android:textSize="12dp"
+                android:text=""
+                android:textColor="@color/price_green_color" />
+
+        </RelativeLayout>
+        
+    </LinearLayout>
+    
+    <RelativeLayout
+        android:id="@+id/prevContainer"
+        android:layout_width="20dp"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:layout_alignParentLeft="true" >
+        
+        <Button
+            android:id="@+id/prevButton"
+            android:layout_width="5dp"
+            android:layout_height="10dp"
+            android:layout_centerInParent="true"
+            android:clickable="false"
+            android:background="@drawable/arrow_left" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/nextContainer"
+        android:layout_width="20dp"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:layout_alignParentRight="true" >
+        
+        <Button
+            android:id="@+id/nextButton"
+            android:layout_width="5dp"
+            android:layout_height="10dp"
+            android:layout_centerInParent="true"
+            android:clickable="false"
+            android:background="@drawable/arrow_right" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ImageView
+        android:id="@+id/thumbImageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:layout_alignParentBottom="true"
+        android:background="#80000000" >
+
+        <TextView
+            android:id="@+id/nameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="22dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="2dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toLeftOf="@+id/rightContainer"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="美景華廈"
+            android:textColor="@color/house_simple_title_color"
+            android:textSize="18sp" />
+        
+        <TextView
+            android:id="@+id/addressTextView"
+            android:layout_width="match_parent"
+            android:layout_height="17dp"
+            android:layout_below="@+id/nameTextView"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginLeft="10dp"
+            android:layout_toLeftOf="@+id/rightContainer"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="台北市大安區....................."
+            android:textColor="@color/white_color"
+            android:textSize="14sp" />
+
+        <RelativeLayout
+            android:layout_width="130dp"
+            android:layout_height="match_parent"
+            android:id="@+id/rightContainer"
+            android:layout_alignParentRight="true"
+            android:paddingRight="10dp"
+            android:paddingTop="10dp" >
+
+            <RelativeLayout
+                android:id="@+id/priceFirstContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/discountButton" >
+
+                <TextView
+                    android:id="@+id/priceFirstTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="17dp"
+                    android:layout_marginRight="10dp"
+                    android:text="1,659萬"
+                    android:textColor="@color/white_color"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+            
+            <Button
+                android:id="@+id/discountButton"
+                android:layout_width="55dp"
+                android:layout_height="17dp"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/price_box"
+                android:clickable="false"
+                android:drawableLeft="@drawable/ic_discount"
+                android:gravity="center_horizontal"
+                android:text="-1.8%"
+                android:textColor="@color/white_color"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/priceTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="7dp"
+				android:layout_alignParentBottom="true"
+                android:text="1,659萬"
+                android:textColor="@color/house_simple_price_color"
+                android:textSize="18sp" />
+            
+		</RelativeLayout>
+        
+    </RelativeLayout>
+
+</RelativeLayout>

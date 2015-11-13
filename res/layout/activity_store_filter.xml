@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res/com.thinkermobile.sinyi"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <include layout="@layout/toolbar" />
+
+    <ScrollView
+        android:id="@+id/filterScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottomContainer"
+        android:layout_below="@+id/toolbar"
+        android:background="@color/white_color" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <RelativeLayout
+                    android:id="@+id/locationContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <LinearLayout
+                        android:id="@+id/areaContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" >
+
+                        <com.yowoo.newbuyhouse.view.TitleRow
+                            android:id="@+id/areaTitleRow"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            custom:iconResource="@drawable/ic_filter_store"
+                            custom:showMoreImage="false"
+                            custom:titleText="門市搜尋" >
+                        </com.yowoo.newbuyhouse.view.TitleRow>
+
+                        <com.yowoo.newbuyhouse.view.SingleChooseRow
+                            android:id="@+id/cityRow"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            custom:titleText="縣市" >
+                        </com.yowoo.newbuyhouse.view.SingleChooseRow>
+
+                        <com.yowoo.newbuyhouse.view.SingleChooseRow
+                            android:id="@+id/areaRow"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            custom:titleText="行政區" >
+                        </com.yowoo.newbuyhouse.view.SingleChooseRow>
+                    </LinearLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/bottomContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#f0f0f0"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="10dp" >
+
+        <Button
+            android:id="@+id/clearButton"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="7dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_cancel_selector"
+            android:text="@string/clear_filter" />
+
+        <Button
+            android:id="@+id/searchButton"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="7dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_green_selector"
+            android:text="@string/start_search" />
+    </LinearLayout>
+
+    <!-- Select Tool: Wheel -->
+
+    <RelativeLayout
+        android:id="@+id/shadow"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#90000000"
+        android:visibility="gone" >
+    </RelativeLayout>
+
+    <com.yowoo.newbuyhouse.view.StoreCityWheelView
+        android:id="@+id/aeraWheelView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone" >
+    </com.yowoo.newbuyhouse.view.StoreCityWheelView>
+
+</RelativeLayout>

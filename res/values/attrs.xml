@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="filterRow">
+        <attr name="titleText" format="string" />
+        <attr name="iconResource" format="reference" />
+        <attr name="showMoreImage" format="boolean" />
+        <attr name="titleTextColor" format="reference" />
+        <attr name="titleBackground" format="reference" />
+        <attr name="rowHeight" format="integer" />
+        <attr name="showIcon" format="boolean" />
+        <attr name="showDetailText" format="boolean" />
+        <attr name="titleBackgroundDrawable" format="reference" />
+        <!-- <attr name="paddingLeft" format="integer"></attr> -->
+    </declare-styleable>
+    
+    <declare-styleable name="RowLayout">
+        <attr name="android:verticalSpacing" />
+        <attr name="android:horizontalSpacing" />
+    </declare-styleable>
+
+</resources>

@@ -1,0 +1,157 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:custom="http://schemas.android.com/apk/res/com.thinkermobile.sinyi"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.sinyi.community.NavigationDrawerFragment" >
+
+    <RelativeLayout
+        android:id="@+id/memberContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <RelativeLayout
+            android:id="@+id/profileContainer"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="#434343"
+            android:clickable="true"
+            android:paddingLeft="20dp"
+            android:paddingRight="10dp" >
+
+            <ImageView
+                android:id="@+id/userImageView"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_user_off" />
+
+            <TextView
+                android:id="@+id/nameTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/userImageView"
+                android:text="會員登入"
+                android:textColor="@color/white_color"
+                android:textSize="18sp" />
+            
+            <ImageView
+                android:id="@+id/arrowImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/nameTextView"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:visibility="gone"
+                android:src="@drawable/ic_menu_arrow" />
+
+            <Button
+                android:id="@+id/logInOutButton"
+                android:layout_width="65dp"
+                android:layout_height="35dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/btn_green_selector"
+                android:text="登出"
+                android:textColor="@color/white_color" />
+
+        </RelativeLayout>
+        
+        <View
+            android:id="@+id/line1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+		    android:layout_below="@+id/profileContainer"
+            android:background="#5d5d5d" />
+
+		<LinearLayout
+		    android:id="@+id/profile_password_Layout"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_below="@+id/line1"
+		    android:background="@color/drawer_bg_sub_color"
+		    android:orientation="vertical"
+		    android:visibility="gone" >
+
+			<RelativeLayout
+			    android:id="@+id/profileRow"
+			    android:layout_width="match_parent"
+			    android:layout_height="50dp" >
+
+				<TextView
+				    android:id="@+id/profileTitleTextView"
+				    android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"
+				    android:text="@string/profile_setting"
+				    android:textColor="@color/menu_title_color"
+				    android:textSize="16sp" 
+				    android:layout_marginLeft="62dp"
+				    android:layout_centerVertical="true" />
+
+			</RelativeLayout>
+			
+			<RelativeLayout
+			    android:id="@+id/passwordRow"
+			    android:layout_width="match_parent"
+			    android:layout_height="50dp" >
+
+				<TextView
+				    android:id="@+id/passwordTitleTextView"
+				    android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"
+				    android:text="@string/pw_setting"
+				    android:textColor="@color/menu_title_color"
+				    android:textSize="16sp" 
+				    android:layout_marginLeft="65dp"
+				    android:layout_centerVertical="true" />
+
+			</RelativeLayout>
+
+		    <!-- <com.yowoo.newbuyhouse.view.TitleRow
+		        android:id="@+id/profileTitleRow"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        custom:rowHeight="60"
+		        custom:showIcon="false"
+		        custom:showMoreImage="false"
+		        custom:titleBackground="@color/drawer_bg_sub_color"
+		        custom:titleText="@string/profile_setting"
+		        custom:titleTextColor="@color/white_color" >
+		    </com.yowoo.newbuyhouse.view.TitleRow>
+		    
+		    <com.yowoo.newbuyhouse.view.TitleRow
+		        android:id="@+id/passwordTitleRow"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        custom:rowHeight="50"
+		        custom:showIcon="false"
+		        custom:showMoreImage="false"
+		        custom:titleBackground="@color/drawer_bg_sub_color"
+		        custom:titleText="@string/pw_setting"
+		        custom:titleTextColor="@color/white_color" >
+		    </com.yowoo.newbuyhouse.view.TitleRow> -->
+		    
+		    <View
+		        android:layout_width="match_parent"
+		        android:layout_height="1dp"
+		        android:background="#5d5d5d" />
+
+		</LinearLayout>
+
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/mDrawerListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/memberContainer"
+        android:background="@color/drawer_bg_color"
+        android:choiceMode="singleChoice"
+        android:divider="#5d5d5d"
+        android:dividerHeight="1dp"
+        android:fitsSystemWindows="true" />
+
+</RelativeLayout>

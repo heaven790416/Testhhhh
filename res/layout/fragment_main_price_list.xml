@@ -1,0 +1,79 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e6e6e6" >
+
+    <RelativeLayout
+        android:id="@+id/noResultContainer"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone" >
+
+        <ImageView
+            android:id="@+id/noResultImageView"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/no_result" />
+
+        <TextView
+            android:id="@+id/noResultTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/noResultImageView"
+            android:gravity="center_horizontal"
+            android:lineSpacingExtra="7dp"
+            android:textColor="#959595"
+            android:text="@string/no_result" />
+
+    </RelativeLayout>
+    
+    
+    <RelativeLayout
+        android:id="@+id/remarkContainer"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#e6e6e6"
+        android:visibility="gone"
+        android:layout_alignParentTop="true" >
+
+        <TextView
+            android:id="@+id/remarkTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:textSize="16sp"
+            android:textColor="@color/price_title_color"
+            android:layout_centerVertical="true"
+            android:text="@string/remark_outlier" />
+        
+        <View 
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="#dbdbdb" />
+
+    </RelativeLayout>
+
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+        android:id="@+id/houseListview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/remarkContainer"
+        android:layout_above="@+id/blankContainer"
+        android:divider="#e6e6e6"
+	    android:dividerHeight="8dp"
+		android:headerDividersEnabled="false"        
+        />
+    
+    <RelativeLayout
+        android:id="@+id/blankContainer"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true" />
+
+</RelativeLayout>

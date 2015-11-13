@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="house_list_order_item">
+　　        <item>預設排序</item>
+　　        <item>降幅</item>
+　　        <item>最新物件</item>
+　　        <item>總價：低>高</item>
+　　        <item>總價：高>低</item>
+			<item>坪數：低>高</item>
+			<item>坪數：高>低</item>
+			<item>屋齡：低>高</item>
+			<item>屋齡：高>低</item>
+　　    </string-array>
+			
+    <string-array name="price_list_order_item">
+    		<item>期間：新>舊</item>
+　　    	<item>總價：低>高</item>
+　　    	<item>總價：高>低</item>
+		<item>坪數：低>高</item>
+		<item>坪數：高>低</item>
+		<item>屋齡：低>高</item>
+		<item>屋齡：高>低</item>
+    </string-array>
+</resources>

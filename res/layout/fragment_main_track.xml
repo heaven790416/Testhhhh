@@ -1,0 +1,309 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_color" >
+
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+            
+            <!-- my collect -->
+            <RelativeLayout
+                android:id="@+id/collectContainer"
+                android:layout_width="match_parent"
+                android:layout_height="250dp">
+            
+                <RelativeLayout
+            		    android:id="@+id/collectNoResultContainer"
+            		    android:layout_width="match_parent"
+            		    android:layout_height="match_parent"
+            		    android:background="@color/track_bg_color"
+                		android:visibility="gone" >
+
+            			<ImageView
+            			    android:id="@+id/collectBgImageView"
+            			    android:layout_width="100dp"
+            			    android:layout_height="100dp"
+            			    android:layout_centerInParent="true"
+            			    android:src="@drawable/favorite_photo" />
+
+            			<TextView
+            			    android:id="@+id/collectNoResultTextView"
+            			    android:layout_width="match_parent"
+            			    android:layout_height="80dp"
+            			    android:layout_alignParentBottom="true"
+            			    android:gravity="center"
+            			    android:background="#80000000"
+            			    android:textColor="@color/white_color"
+            			    android:textSize="16sp"
+            			    android:text="@string/track_collect_no_record" />
+					
+                </RelativeLayout>
+
+                <com.yowoo.newbuyhouse.view.CollectRow
+                    android:id="@+id/collectRow"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone" >
+                </com.yowoo.newbuyhouse.view.CollectRow>
+                
+            		<com.yowoo.newbuyhouse.slider.MyAutoScrollViewPager
+            		    android:id="@+id/collectViewPager"
+            		    android:layout_width="match_parent"
+            		    android:layout_height="match_parent" />
+            		
+            		<RelativeLayout
+            		    android:id="@+id/collectMoreContainer"
+            		    android:layout_width="120dp"
+            		    android:layout_height="40dp"
+            		    android:layout_alignParentRight="true"
+            		    android:background="#80000000" >
+
+            			<ImageView
+            			    android:id="@+id/collectArrowImageView"
+            			    android:layout_width="8dp"
+            			    android:layout_height="15dp"
+            			    android:layout_centerInParent="true"
+            			    android:layout_alignParentRight="true"
+            			    android:layout_marginRight="5dp"
+            			    android:src="@drawable/arrow_collect" />
+
+            			<TextView
+            			    android:id="@+id/collectMoreTextView"
+            			    android:layout_width="wrap_content"
+            			    android:layout_height="match_parent"
+            			    android:gravity="center"
+            			    android:layout_toLeftOf="@+id/collectArrowImageView"
+            			    android:layout_marginRight="5dp"
+            			    android:textColor="@color/white_color"
+            			    android:textSize="16sp"
+            			    android:text="@string/more_collect" />
+					
+                </RelativeLayout>
+            		
+            		
+            </RelativeLayout>
+            
+            <!-- subscribe -->
+            <RelativeLayout
+                android:id="@+id/subscribeContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="13dp"
+                android:paddingRight="13dp"
+                android:paddingTop="15dp"
+                android:paddingBottom="5dp"
+                android:background="@color/track_bg_color" >
+                
+                <RelativeLayout
+                    android:id="@+id/subscribeTitleContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="38dp"
+                    android:background="@drawable/list_box_top">
+
+                    <TextView
+                        android:id="@+id/subscribeTitleTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:text="@string/new_house_notify"
+                        android:textColor="@color/track_title_color" />
+
+                    <TextView
+                        android:id="@+id/subscribeCountTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@+id/subscribeArrowButton"
+                        android:layout_marginRight="10dp"
+                        android:textColor="@color/track_title_color"
+                        android:text="5" />
+
+                    <Button
+                        android:id="@+id/subscribeArrowButton"
+                        android:layout_width="8dp"
+                        android:layout_height="13dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="10dp"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/arrow_track" />
+
+				</RelativeLayout>
+
+                <RelativeLayout 
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/subscribeTitleContainer"
+                    android:background="@drawable/list_box_bottom">
+
+                    <com.yowoo.newbuyhouse.view.TrackNoResultRow
+                        android:id="@+id/subscribeTrackNoResultRow"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone" >
+                    </com.yowoo.newbuyhouse.view.TrackNoResultRow>
+                		
+                		<com.yowoo.newbuyhouse.view.HouseRow
+                		    android:id="@+id/subscribeHouseRow"
+                		    android:layout_width="match_parent"
+                		    android:layout_height="wrap_content" >
+                		</com.yowoo.newbuyhouse.view.HouseRow>
+                		
+				</RelativeLayout>
+				
+			</RelativeLayout>
+            
+            <!-- recent visit -->
+            <RelativeLayout
+                android:id="@+id/visitContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="13dp"
+                android:paddingRight="13dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:background="@color/track_bg_color" >
+                
+                <RelativeLayout
+                    android:id="@+id/visitTitleContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="38dp"
+                    android:background="@drawable/list_box_top">
+
+                    <TextView
+                        android:id="@+id/visitTitleTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:text="@string/recent_visit"
+                        android:textColor="@color/track_title_color" />
+
+                    <TextView
+                        android:id="@+id/visitCountTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@+id/visitArrowButton"
+                        android:layout_marginRight="10dp"
+                        android:textColor="@color/track_title_color"
+                        android:text="5" />
+
+                    <Button
+                        android:id="@+id/visitArrowButton"
+                        android:layout_width="8dp"
+                        android:layout_height="13dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="10dp"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/arrow_track" />
+
+				</RelativeLayout>
+
+                <RelativeLayout 
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/visitTitleContainer"
+                    android:background="@drawable/list_box_bottom">
+
+                    <com.yowoo.newbuyhouse.view.TrackNoResultRow
+                        android:id="@+id/visitTrackNoResultRow"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone" >
+                    </com.yowoo.newbuyhouse.view.TrackNoResultRow>
+                		
+                		<com.yowoo.newbuyhouse.view.HouseRow
+                		    android:id="@+id/visitHouseRow"
+                		    android:layout_width="match_parent"
+                		    android:layout_height="wrap_content" >
+                		</com.yowoo.newbuyhouse.view.HouseRow>
+                		
+				</RelativeLayout>
+				
+			</RelativeLayout>
+			
+            
+            <!-- recent search -->
+            <RelativeLayout
+                android:id="@+id/searchContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="13dp"
+                android:paddingRight="13dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="15dp"
+                android:background="@color/track_bg_color" >
+                
+                <RelativeLayout
+                    android:id="@+id/searchTitleContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="38dp"
+                    android:background="@drawable/list_box_top">
+
+                    <TextView
+                        android:id="@+id/searchTitleTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:text="@string/recent_search"
+                        android:textColor="@color/track_title_color" />
+
+                    <TextView
+                        android:id="@+id/searchCountTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@+id/searchArrowButton"
+                        android:layout_marginRight="10dp"
+                        android:textColor="@color/track_title_color"
+                        android:text="5" />
+
+                    <Button
+                        android:id="@+id/searchArrowButton"
+                        android:layout_width="8dp"
+                        android:layout_height="13dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="10dp"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/arrow_track" />
+
+				</RelativeLayout>
+
+                <RelativeLayout 
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/searchTitleContainer"
+                    android:background="@drawable/list_box_bottom">
+
+                    <com.yowoo.newbuyhouse.view.TrackNoResultRow
+                        android:id="@+id/searchTrackNoResultRow"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone" >
+                    </com.yowoo.newbuyhouse.view.TrackNoResultRow>
+                		
+                		<com.yowoo.newbuyhouse.view.HouseRow
+                		    android:id="@+id/searchHouseRow"
+                		    android:layout_width="match_parent"
+                		    android:layout_height="wrap_content" >
+                		</com.yowoo.newbuyhouse.view.HouseRow>
+                		
+				</RelativeLayout>
+				
+			</RelativeLayout>
+            
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

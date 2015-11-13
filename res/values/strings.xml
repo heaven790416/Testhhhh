@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <string name="facebook_app_id">521980444619989</string>
+	<string name="server_client_id"></string>
+	
+    <string name="app_name">信義房屋</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_filter">搜尋條件</string>
+    
+    <!-- Drawer -->
+    <string name="drawer_section_house">買屋搜尋</string>
+    <string name="drawer_section_price">成交行情</string>
+    <string name="drawer_section_track">瀏覽追蹤</string>
+    <string name="drawer_section_news">房市動態</string>
+    <string name="drawer_section_store">信義門市</string>
+    <string name="drawer_section_chat">聯繫客服</string>
+    <string name="drawer_section_leave_message">買屋留言</string>
+    <string name="drawer_section_leave_message_sell">賣屋留言</string>
+    
+    <!-- Base Activity -->
+    <string name="processing">處理中&#8230;</string>
+    <string name="network_not_stable">網路不穩定</string>
+    <string name="no_network_please_check">無網路連線，請檢查網路狀況</string>
+    <string name="no_gps_location_please_check">無法定位目前位置，請開啟GPS</string>
+    <string name="no_gps_ask_open_gps">您尚未開啟GPS,是否前往設定開啟GPS？</string>
+    <string name="remind">提示</string>
+    <string name="back_again_to_exit">再按一次離開本程式</string>
+    
+    <!-- test drawer: need delete -->
+    <string name="title_title1">Title 1</string>
+    <string name="title_section1">Section 1</string>
+    <string name="title_section2">Section 2</string>
+    <string name="title_section3">Section 3</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_example">Example action</string>
+    
+    <!-- House -->
+    <string name="area_building">建坪</string>
+    <string name="year">年</string>
+    <string name="clear_filter">清除條件</string>
+    <string name="start_search">開始搜尋</string>
+    <string name="not_restrict">不指定</string>
+    
+    <!-- <string name="order_default">預設排序</string>
+    <string name="order_discount">降幅</string>
+    <string name="order_newest">最新物件</string>
+    <string name="order_price_low_high">總價：低>高</string>
+    <string name="order_price_high_low">總價：高>低</string>
+	<string name="order_area_low_high">坪數：低>高</string>
+    <string name="order_area_high_low">坪數：高>低</string>
+	<string name="order_year_low_high">屋齡：低>高</string>
+    <string name="order_year_high_low">屋齡：高>低</string> -->
+    
+    <string name="order">排序方式</string>
+    <string name="current_location">目前位置</string>
+    <string name="switch_to_list">切換成列表</string>
+    <string name="switch_to_map">切換成地圖</string>
+    
+    <string name="hint_keyword">路街.社區.關鍵字或物件編號</string>
+    <string name="hint_need_select_mrt_line">請選擇一個捷運線</string>
+    <string name="house_filter">房屋搜尋</string>
+    
+    <!-- House Detail -->
+    <string name="house_detail">房屋資訊</string>
+    <string name="contact_service">聯絡客服</string>
+    <string name="call">撥打電話</string>
+    <string name="interact">互動看屋</string>
+    <string name="community_public">社區公設</string>
+    <string name="layout_image">格局圖</string>
+    <string name="description">物件描述</string>
+    <string name="basic_info">基本資料</string>
+    <string name="live_info">生活機能</string>
+    <string name="house_map">物件地圖</string>
+    <string name="contact">業務聯絡</string>
+    <string name="call_salesman">業務回電</string>
+    <string name="reservation">預約看屋</string>
+    
+    <string name="community">社區名稱</string>
+    <string name="address">地址</string>
+    <string name="layout">格局</string>
+    <string name="area_land">地坪</string>
+    <string name="area_public">公共設施</string>
+    <string name="age">屋齡</string>
+    <string name="floor">出售樓層 / 總樓層</string>
+    <string name="family">每層戶數</string>
+    <string name="face">朝向</string>
+	<string name="type">類型</string>
+	<string name="security">警衛管理</string>
+	<string name="monthly_fee">月管理費</string>
+	<string name="side_dark">邊間 / 暗房</string>
+	<string name="building_structure">建物材質</string>
+	<string name="wall_structure">外牆結構</string>
+	<string name="parking">車位</string>
+	<string name="primary_school">鄰近小學</string>
+	<string name="junior_school">鄰近中學</string>
+	<string name="market">鄰近市場</string>
+	<string name="garden">鄰近公園</string>
+	<string name="mrt_info">捷運資訊</string>
+	<string name="store">分店</string>
+	<string name="store_tel">電話</string>
+	<string name="store_address">地址</string>
+	
+	<string name="unit_pyeong">坪</string>
+	<string name="unit_year">年</string>
+	<string name="unit_floor">樓</string>
+	<string name="unit_dollar">元</string>
+	<string name="yes">是</string>
+	<string name="no">否</string>
+	<string name="has">有</string>
+	<string name="building">大樓</string>
+	<string name="house">物件</string>
+	<string name="window">落地窗</string>
+	<string name="show_more">顯示更多</string>
+	<string name="hide_info">隱藏資訊</string>
+	
+	<string name="no_result">很抱歉！目前沒有適合您的搜尋結果\n請重新搜尋。謝謝！</string>
+	<string name="no_result_please_search_again">無搜尋結果，請重新搜尋</string>
+	<string name="please_select_area">請選擇行政區</string>
+	<string name="no_house_result_under_filter">在此區域及搜尋條件下沒有買屋物件</string>
+	
+	<string name="gender_male">先生</string>
+	<string name="gender_female">小姐</string>
+	<string name="name">姓名</string>
+	<string name="gender">稱謂</string>
+	<string name="phone">聯絡電話</string>
+	<string name="email">E-mail</string>	
+	<string name="contact_date">聯絡時間</string>
+	<string name="send_reservation">送出預約</string>
+	<string name="send_salesman">業務回電</string>
+	<string name="form_law_text1">我已同意本APP的</string>
+	<string name="form_law_text2">服務條款</string>
+	<string name="form_reservation_intro1">您好，為您預約</string>
+	<string name="form_reservation_intro2">之賞屋行程，業務人員將儘快與您聯繫。</string>
+	<string name="form_salesman_intro">您好，我們將依照您所指定的方便時段與方式，儘速與您聯繫。</string>
+	<string name="please_check_law">請先閱讀及勾選服務條款</string>
+	<string name="please_type_in">您需填寫</string>
+	<string name="please_choose_day_after_today">請選擇今日以後的日期</string>
+	<string name="from_law_explane">＊當您於本網頁提供個人資料，即表示您同意信義房屋蒐集您的個人相關資料，蒐集目的在由本公司營業區域內之業務人員隨時向您提供相關行銷訊息，若您未予完整提供，可能導致服務效能受到影響。另您所提供之資料，本公司除將依法負保密之責外，您也可以隨時向本公司業務人員或客服中心行使查詢更正補充刪除等權利。</string>
+	
+	<!-- store -->
+	<string name="contact_store">聯絡門市</string>
+	
+	<!-- login -->
+	<string name="login">登入</string>
+    <string name="logout">登出</string>
+    <string name="account_hint">帳號</string>
+	<string name="password_hint">密碼</string>
+	<string name="checking">資料檢查中&#8230;</string>
+	<string name="logining">登入中</string>
+	<string name="login_fail">登入失敗</string>
+	<string name="logout_fail">登出失敗，請檢查網路連線</string>
+	<string name="logout_success">登出成功</string>
+	<string name="member_account">帳號</string>
+	<string name="member_password">密碼</string>
+	<string name="register">會員註冊</string>
+	<string name="forget_password">忘記密碼</string>
+	<string name="cannot_login_contact_service">無法登入？聯絡客服</string>
+	<string name="member_login">會員登入</string>
+	<string name="send">送出</string>
+	<string name="cancel">取消</string>
+	<string name="save">儲存</string>
+	<string name="member_mobile">手機</string>
+	<string name="member_email">Email</string>
+	<string name="mobile_hint"></string>
+	<string name="email_hint"></string>
+	
+	<string name="nickname">暱稱</string>
+	<string name="birthday">生日</string>
+    <string name="phone_number">手機號碼</string>
+    <string name="back_phone_number">備用手機號碼</string>
+	<string name="house_tel">住家電話</string>
+	<string name="office_tel">公司電話</string>
+	<string name="profile_email">電子郵件</string>
+	<string name="profile_back_email">備用電子郵件</string>
+	<string name="identity">身分</string>
+	<string name="not_verified">未驗證</string>
+	<string name="verified">已驗證</string>
+	<string name="verify_code">驗證碼</string>
+	<string name="verify_code_hint">請輸入驗證碼</string>
+	<string name="profile_setting">修改個人資料</string>
+	<string name="pw_setting">更新密碼</string>
+	<string name="input_temp_pw">輸入臨時密碼</string>
+	<string name="input_verify_code">輸入驗證碼</string>
+	<string name="input_basic_data">新增個人資料</string>
+	<string name="new_password">新密碼</string>
+	<string name="new_password_again">再次輸入新密碼</string>
+	<string name="resend_verify_code">重送驗證碼</string>
+	<string name="send_verify_code_success">發送驗證碼成功</string>
+	<string name="send_verify_code_fail">發送驗證碼失敗，請再試一次</string>
+	<string name="skip">略過</string>
+	<string name="login_error_occured">登入OpenID發生錯誤</string>
+	<string name="login_error_no_email">無法獲取OpenID Email進行驗證，請更新您的yahoo帳號設定</string>
+	<string name="yahoo_login">Yahoo登入</string>
+	<string name="update_success">更新成功</string>
+	<string name="update_fail">更新失敗</string>
+	<string name="send_verify_code_error">發送驗證碼失敗</string>
+	<string name="login_success">登入成功</string>
+	<string name="send_temp_pw_success">重發臨時密碼成功</string>
+	<string name="verify_success">驗證成功</string>
+	<string name="pw_not_equal">兩組密碼輸入不同</string>
+	<string name="login_cancel">取消登入</string>
+	
+	<!-- 瀏覽追蹤 -->
+	<string name="fav">收藏</string>
+	<string name="prompt_merge_fav_house">是否合併目前的收藏物件於您的帳號中,共%1$d筆？</string>
+	<string name="prompt_delete_fav">請注意！點選刪除按鈕\n將會永久刪除未登入前的收藏物件</string>
+	<string name="prompt_update_user_data_fail">更新使用者資料發生問題,請再試一次</string>
+	<string name="delete">刪除</string>
+	<string name="delete_select_content">刪除選取的內容</string>
+	<string name="prompt_no_select_house">您尚未選取物件</string>
+	<string name="track_collect">我的收藏</string>
+	<string name="recent_visit">最近瀏覽</string>
+	<string name="recent_search">最近搜尋</string>
+	<string name="new_house_notify">新屋通知</string>
+	<string name="track_visit_no_record">目前尚無瀏覽記錄\n請前往買屋搜尋瀏覽物件</string>
+	<string name="track_search_no_record">目前尚無搜尋記錄\n請前往買屋搜尋</string>
+	<string name="track_notify_no_record">訂閱的搜尋條件如有新物件，將會在此通知您</string>
+	<string name="track_error_no_result">目前暫無資料\n請前往買屋搜尋</string>
+	<string name="track_search_no_match_house">最新搜尋條件無符合物件\n請點入查看更多搜尋條件</string>
+	<string name="track_collect_no_record">目前尚無我的收藏，請尋找您的理想清單\n並收藏在這裡吧!</string>
+	<string name="more_collect">更多我的收藏</string>
+	<string name="no_any_collect">沒有任何收藏</string>
+	<string name="no_collect_remind">您可以在瀏覽物件的時候\n將喜歡的物件收藏起來！</string>
+	<string name="no_subscribe">目前尚無訂閱新屋條件\n請前往買屋搜尋\n訂閱您想長期追蹤的搜尋條件</string>
+	<string name="add_collect_success">加入收藏成功</string>
+	<string name="add_collect_fail">加入收藏失敗</string>
+	<string name="remove_collect_success">取消收藏成功</string>
+	<string name="remove_collect_fail">取消收藏失敗</string>
+	
+	<string name="deal_price">成交價：</string>
+	<string name="sold_date">交屋日期</string>
+	
+	<string name="house_news">房市動態</string>
+	<string name="no_more_lastest_news">無更新文章</string>
+	<string name="no_more_older_news">已無更舊文章</string>
+	
+	<!-- 訂閱新屋通知 -->
+	<string name="subscribe">訂閱新屋通知</string>
+	
+	<!-- Price -->
+	<string name="price_keyword_example">例：捷運台北車站 . 高雄85大樓</string>
+	<string name="price_keyword_hint">請輸入地標.關鍵字或地址</string>
+	<string name="no_price_result_under_filter">在此區域及搜尋條件下沒有成交行情</string>
+	<string name="remark_outlier">＊為極端行情，可能因特殊屋況或交易所造成</string>
+	<string name="price_filter">成交行情搜尋</string>
+	
+</resources>

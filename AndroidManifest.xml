@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.thinkermobile.sinyi"
+    android:versionCode="10"
+    android:versionName="3.1" >
+
+    <uses-sdk
+        android:minSdkVersion="9"
+        android:targetSdkVersion="21" />
+
+    <permission
+            android:name="com.google.maps.android.utils.permission.MAPS_RECEIVE"
+            android:protectionLevel="signature"/>
+    <uses-permission android:name="com.google.maps.android.utils.permission.MAPS_RECEIVE"/>
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    
+    <!-- google+ login  -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS"/>
+    
+    <!-- GCM -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+
+    <permission android:name="com.thinkermobile.sinyi.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+    <uses-permission android:name="com.thinkermobile.sinyi.permission.C2D_MESSAGE" />
+    <!-- GCM -->
+    
+    
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true"/>
+    
+   
+  
+    <application
+        android:name="com.yowoo.newbuyhouse.NewBuyHouseApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/sy_icon"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        
+        
+    
+        
+        <meta-data
+                android:name="com.google.android.gms.version"
+                android:value="@integer/google_play_services_version" />
+
+        <!-- Google Analytics Version v4 needs this value for easy tracking -->
+  <meta-data android:name="com.google.android.gms.analytics.globalConfigResource"
+  android:resource="@xml/global_tracker" />
+        <!-- DebugKeyStore ; com.yowoo.newbuyhouse -->
+        <!-- <meta-data
+                android:name="com.google.android.maps.v2.API_KEY"
+                android:value="AIzaSyCDoPj-8nim1hcTIJAO9sDG_0SoPxRO2Qg"/> -->
+        
+        <!-- myKeyStore ; com.yowoo.newbuyhouse -->
+        <!-- <meta-data
+                android:name="com.google.android.maps.v2.API_KEY"
+                android:value="AIzaSyAsiSGI_zvplZfAxYf3JsQHz-XFizAOxXc"/> -->
+                
+        <!-- DebugKeyStore ; com.thinkermobile.sinyi -->
+       <!--  <meta-data
+                android:name="com.google.android.maps.v2.API_KEY"
+                android:value="AIzaSyALncmYV23MeMf3hUK_NT0hX0R5jdic8yM"/> -->
+        
+        <!-- SheriDebugKeyStore ; com.thinkermobile.sinyi -->
+        <meta-data
+                android:name="com.google.android.maps.v2.API_KEY"
+                android:value="AIzaSyChmoafB1jkdSK9zexTSL1QSGOpZAxbrLA"/>
+        
+        <!-- myKeyStore ; com.thinkermobile.sinyi -->
+        <!-- <meta-data
+                android:name="com.google.android.maps.v2.API_KEY"
+                android:value="AIzaSyDnC_H0UGW2s2IbRDblynJ_f6xE86KTOh8"/> -->
+        
+        <!-- sinyi KeyStore ; com.thinkermobile.sinyi -->
+        <!-- <meta-data
+                android:name="com.google.android.maps.v2.API_KEY"
+                android:value="AIzaSyDd2gEJGpf0HMC3uo0wj40xR1FQibACWjQ"/> -->
+        
+        <!-- Facebook App Id -->
+        <meta-data 
+            android:name="com.facebook.sdk.ApplicationId" 
+            android:value="@string/facebook_app_id"/>
+        
+        <activity
+            android:name="com.yowoo.newbuyhouse.StartActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name="com.yowoo.newbuyhouse.MainActivity"
+            android:label="@string/app_name" >
+        </activity>
+        
+        <activity
+            android:name="com.yowoo.newbuyhouse.house.HouseFilterActivity"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+        
+        <activity
+            android:name="com.yowoo.newbuyhouse.house.HouseDetailActivity"
+            android:label="@string/app_name" >
+        </activity>
+        
+        <activity
+            android:name="com.yowoo.newbuyhouse.house.HouseVrActivity"
+            android:label="@string/app_name" >
+        </activity>
+        
+        <activity
+            android:name="com.yowoo.newbuyhouse.house.HouseFormActivity"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+        
+        <activity
+            android:name="com.yowoo.newbuyhouse.house.MultiPhotoViewerActivity"
+            android:label="@string/app_name" >
+        </activity>
+        
+        <activity
+            android:name="com.yowoo.newbuyhouse.store.StoreFilterActivity"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+        
+        <activity
+            android:name="com.yowoo.newbuyhouse.login.LoginActivity"
+            android:label="@string/app_name" >
+        </activity>
+        
+        <activity
+            android:name="com.yowoo.newbuyhouse.login.ForgetPwActivity"
+            android:label="@string/app_name" >
+        </activity>
+        
+        <activity
+            android:name="com.yowoo.newbuyhouse.login.InputPwActivity"
+            android:label="@string/app_name" >
+        </activity>
+              
+        <activity
+            android:name="com.yowoo.newbuyhouse.login.RegisterActivity"
+            android:label="@string/app_name" >
+        </activity>
+        
+        <activity
+            android:name="com.yowoo.newbuyhouse.login.InputBasicDataActivity"
+            android:label="@string/app_name" >
+        </activity>
+        
+        <activity
+            android:name="com.yowoo.newbuyhouse.login.ProfileActivity"
+            android:label="@string/app_name" >
+        </activity>
+        
+        <activity
+            android:name="com.yowoo.newbuyhouse.login.InputVerifyCodeActivity"
+            android:label="@string/app_name" >
+        </activity>
+        
+        <activity
+            android:name="com.yowoo.newbuyhouse.login.ModifyPwActivity"
+            android:label="@string/app_name" >
+        </activity>
+        
+        <activity
+            android:name="com.yowoo.newbuyhouse.slider.AutoScrollViewPagerDemo"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme" >
+        </activity>
+        
+        <activity 
+            android:name="com.yowoo.newbuyhouse.track.TrackCollectActivity"
+            android:label="@string/app_name">
+        </activity>
+        
+        <activity 
+            android:name="com.yowoo.newbuyhouse.track.TrackSearchActivity"
+            android:label="@string/app_name">
+        </activity>
+        
+        <activity 
+            android:name="com.yowoo.newbuyhouse.track.TrackSearchHouseActivity"
+            android:label="@string/app_name">
+        </activity>
+        
+        <activity 
+            android:name="com.yowoo.newbuyhouse.track.TrackVisitActivity"
+            android:label="@string/app_name">
+        </activity>
+        
+        <activity 
+            android:name="com.yowoo.newbuyhouse.track.TrackSubscribeActivity"
+            android:label="@string/app_name">
+        </activity>
+        
+        <activity 
+            android:name="com.yowoo.newbuyhouse.track.TrackSubscribeHouseActivity"
+            android:label="@string/app_name">
+        </activity>
+        
+        <activity 
+            android:name="com.yowoo.newbuyhouse.news.NewsDetailActivity"
+            android:label="@string/app_name">
+        </activity>
+        
+        <activity 
+            android:name="com.yowoo.newbuyhouse.price.PriceFilterActivity"
+            android:label="@string/app_name">
+        </activity>
+            
+		<activity 
+            android:name="com.yowoo.newbuyhouse.login.YahooLoginActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTask">
+            
+            <!-- START CHANGE -->
+    			<intent-filter>
+    			    <data
+    			        android:scheme="yahoo"
+                    android:host="callback" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <action android:name="android.intent.action.VIEW" />
+            </intent-filter>
+            <!-- END CHANGE -->
+        </activity>
+        
+        <!-- Facebook Login -->
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        
+        <!-- Fabric, Crashlytics -->
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="7b6b2a470473b401ac80a23ef1ff76269381c0c9" />
+        
+        <!-- GCM -->
+        <receiver
+            android:name="com.thinkermobile.sinyi.GcmBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <category android:name="com.thinkermobile.sinyi" />
+            </intent-filter>
+        </receiver>
+        <service android:name="com.thinkermobile.sinyi.GcmMessageHandlerer" />
+
+        <meta-data android:name="com.google.android.gms.version"
+           android:value="@integer/google_play_services_version" />
+        
+    </application>
+
+</manifest>

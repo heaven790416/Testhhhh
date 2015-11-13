@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/visitResultContainer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <RelativeLayout
+        android:id="@+id/contentContainer"
+        android:layout_width="match_parent"
+        android:layout_height="85dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/white_color" >
+
+        <TextView
+            android:id="@+id/titleTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/badgeContainer"
+            android:text="@string/track_visit_no_record"
+            android:textColor="@color/track_hint_color" />
+
+        <RelativeLayout
+            android:id="@+id/badgeContainer"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true" >
+
+            <TextView
+                android:id="@+id/badgeTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/badge"
+                android:gravity="center"
+                android:text="2"
+                android:textColor="@color/white_color" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/shadowContainer"
+            android:layout_width="match_parent"
+            android:layout_height="135dp"
+            android:background="#80000000"
+            android:visibility="gone" >
+
+            <Button
+                android:id="@+id/selectButton"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/tick_collect_normal" />
+        </RelativeLayout>
+    </RelativeLayout>
+    
+    <RelativeLayout
+        android:id="@+id/bottomContainer"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_below="@+id/contentContainer"
+        android:background="@color/search_bg_color" >
+    </RelativeLayout>
+
+</RelativeLayout>

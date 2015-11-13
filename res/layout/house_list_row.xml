@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#e6e6e6"
+    android:paddingBottom="5dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="5dp" >
+
+    <RelativeLayout
+        android:id="@+id/houseCountContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="共有 "
+            android:textColor="#a0a0a0" />
+
+        <TextView
+            android:id="@+id/totalTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/textView1"
+            android:text="0"
+            android:textColor="#019483" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/totalTextView"
+            android:text=" 間房屋"
+            android:textColor="#a0a0a0" />
+    </RelativeLayout>
+
+    <!--
+         <TextView
+        android:id="@+id/totalTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:text="共有xx間房屋" />
+    -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/houseCountContainer" >
+
+        <com.yowoo.newbuyhouse.view.HouseRow
+            android:id="@+id/houseRow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+        </com.yowoo.newbuyhouse.view.HouseRow>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_below="@+id/houseRow"
+            android:background="@drawable/bg_list_bottom"
+            android:paddingLeft="10dp" >
+
+            <TextView
+                android:id="@+id/moreTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="36.34建坪  2房  5.5年"
+                android:textColor="#555555" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/shadowContainer"
+            android:layout_width="match_parent"
+            android:layout_height="135dp"
+            android:background="#80000000"
+            android:visibility="gone" >
+
+            <Button
+                android:id="@+id/selectButton"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/tick_collect_normal" />
+        </RelativeLayout>
+        
+        <RelativeLayout
+            android:id="@+id/newContainer"
+            android:layout_width="match_parent"
+            android:layout_height="135dp"
+            android:visibility="gone" >
+            
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/list_box_new" />
+
+            <ImageView
+                android:id="@+id/newImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:src="@drawable/icon_new" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>
